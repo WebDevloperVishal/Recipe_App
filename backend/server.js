@@ -18,7 +18,7 @@ app.use("/api/auth", authRoutes);
 app.use("/api/recipes", recipesRoutes);
 
 app.get("/",(req,res) =>{
-    res.send("server is running")
+    res.redirect(process.env.FRONTEND_URL)
 });
 
 app.listen(PORT,()=>{
